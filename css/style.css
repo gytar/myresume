@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Nunito&family=PT+Sans&display=swap");
+
+
+.bg-test {
+    background-color: red;
+}
+.bg-test-1 {
+    background-color: green;
+}
+
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.neonTextPurple {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #bc0ce9,
+    0 0 82px #bc0ce9, 0 0 92px #bc0ce9, 0 0 102px #bc0ce9, 0 0 151px #bc0ce9;
+}
+
+.neonTextBlue {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #2badad,
+    0 0 82px #2badad, 0 0 92px #2badad, 0 0 102px #2badad, 0 0 151px #2badad;
+}
+
+.box--shadow-blue {
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #2badad,
+    0 0 0.8rem #2badad, 0 0 2.8rem #2badad, inset 0 0 1.3rem #2badad;
+}
+
+.box-shadow-purple {
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc0ce9,
+    0 0 0.8rem #bc0ce9, 0 0 2.8rem #bc0ce9, inset 0 0 1.3rem #bc0ce9;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  line-height: 1.5;
+  font-size: 18px;
+  background-color: #2c2b40;
+  font-family: "Nunito", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "PT Sans", sans-serif;
+  padding: 0.4rem;
+  text-transform: uppercase;
+  color: white; 
+}
+ 
+h1 {
+  font-family: "Bungee Shade", cursive;
+  text-align: center;
+  font-weight: 400;
+  border: 0.2rem solid #fff;
+  border-radius: 1rem;
+  width: 40vw;
+  margin: 0 auto;
+  transform-origin: 0 0;
+  transform: rotate(-5deg);
+  animation: flicker 1.5s infinite alternate; /* Animation */
+}
+
+h2 {
+  font-weight: 400;
+  margin: 0 auto;
+  width: 25%;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+.text-center {
+  text-align: center !important;
+}
+.text-left {
+  text-align: left !important;
+}
+
+h1 {
+  font-size: 4.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+  
+    scroll-snap-type: mandatory;
+    /* scroll-snap-points-y: repeat(100vh); */
+    scroll-snap-type: y mandatory;
+    scroll-padding: 5vh 0;
+}
+.container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  scroll-snap-align: center;
+}
+
+/* Intro */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../img/bg.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* About Me */
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.about-me-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #444358;
+  border-radius: 1rem;
+  width: 75vw;
+  height: 50vh;
+}
+
+.text {
+  width: 50%;
+  margin: 3rem;
+}
+
+.text h2 {
+  width: 100%;
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#pic-underline {
+  color: #a6a5bb;
+  font-style: italic;
+  font-size: 0.75rem;
+  margin-top: 1em;
+}
+
+.frame-circle {
+  display: inline-block;
+  position: relative;
+  width: 15em;
+  height: 15em;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular-img {
+  width: 20em;
+}
+
+/* My route */
+
+.path {
+}
+
+/* Technologies I use */
+
+.technologies {
+}
+
+/* Contact me form */
+
+.contactMe {
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #bc0ce9,
+      0 0 80px #bc0ce9, 0 0 90px #bc0ce9, 0 0 100px #bc0ce9, 0 0 150px #bc0ce9;
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 1500px) {
+  .intro h1 {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .intro h1 {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .intro h1 {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .intro h1 {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .intro h1 {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .intro h1 {
+    width: 95%;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+}
